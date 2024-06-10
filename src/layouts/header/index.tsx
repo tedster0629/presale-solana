@@ -25,7 +25,7 @@ export default function Header() {
         }
     };
     return (
-        <aside className="w-full max-w-[1500px] z-10 py-12">
+        <aside className="w-full max-w-[1500px] z-10 pt-12">
             <div className="flex items-center justify-between">
                 <div className="desktop_sm:hidden"></div>
                 <div className="flex items-center gap-5 ">
@@ -41,7 +41,7 @@ export default function Header() {
                         <div className="text-h3  !font-jolly_lodger tablet_md:text-h4">THE WBT</div>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 desktop_sm:hidden">
                     <ButtonContainer text={!publicKey
                         ? "CONNECT WALLET"
                         : publicKey.toBase58().slice(0, 6) +

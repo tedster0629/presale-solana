@@ -26,9 +26,9 @@ export default function RootLayout({
     )}>
       <body className={`font-inter `}>
         <WalletContextProvider >
-          <main className="flex flex-col items-center bg-no-repeat	bg-cover bg-center px-16  h-full desktop_sm:h-full relative ">
-            <div className="w-full absolute h-full">
-              <video autoPlay playsInline muted loop className="absolute -z-9">
+          <main className="flex flex-col items-center bg-no-repeat	bg-cover bg-center px-16 pb-12  h-full desktop_sm:h-full relative ">
+            <div className="w-full absolute h-full  ">
+              <video autoPlay playsInline muted loop className="absolute -z-9 object-cover h-full w-full">
                 <source src="//videos.ctfassets.net/beeay9aupl8z/2nonazyKM6beq7FI4MhJfO/926ad2c9a58e02ac746b26e405fc610c/seagulls.mp4" />
               </video>
             </div>

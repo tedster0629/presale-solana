@@ -66,7 +66,8 @@ export default function usePresale() {
                         ],
                         program.programId
                     );
-                    const info = await program.account.presaleInfo.fetch(presale_info);
+
+                    const info = await program.account?.presaleInfo.fetch(presale_info);
                     setStartTime(info.startTime);
                     setEndTime(info.endTime);
                     setTotalBuyAmount(info.soldTokenAmount);
@@ -91,7 +92,7 @@ export default function usePresale() {
                         ],
                         program.programId
                     );
-                    const info = await program.account.userInfo.fetch(userInfo);
+                    const info = await program.account?.userInfo.fetch(userInfo);
                     setBuyAmount(info.buyTokenAmount);
                 } catch (error) {
                     console.log("get user error");

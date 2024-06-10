@@ -496,7 +496,7 @@ export type TokenPresale = {
     ],
     "accounts": [
         {
-            "name": "PresaleInfo",
+            "name": "presaleInfo",
             "type": {
                 "kind": "struct",
                 "fields": [
@@ -564,7 +564,7 @@ export type TokenPresale = {
             }
         },
         {
-            "name": "UserInfo",
+            "name": "userInfo",
             "type": {
                 "kind": "struct",
                 "fields": [
@@ -1143,7 +1143,7 @@ export const IDL: TokenPresale = {
     ],
     "accounts": [
         {
-            "name": "PresaleInfo",
+            "name": "presaleInfo",
             "type": {
                 "kind": "struct",
                 "fields": [
@@ -1211,7 +1211,7 @@ export const IDL: TokenPresale = {
             }
         },
         {
-            "name": "UserInfo",
+            "name": "userInfo",
             "type": {
                 "kind": "struct",
                 "fields": [
