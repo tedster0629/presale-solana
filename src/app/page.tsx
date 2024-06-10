@@ -56,7 +56,6 @@ export default function Home() {
     buyToken(isValue, isValue / PRICE_PER_TOKEN);
   };
 
-
   const [count, setCount] = useState({
     days: 0,
     hours: 0,
@@ -106,9 +105,8 @@ export default function Home() {
 
   }, [count, endTime, startTime, publicKey]);
 
-
   return (
-    <main className="flex flex-col items-center justify-between h-full w-full mt-20 max-w-[1500px] gap-32">
+    <main className="flex flex-col items-center justify-between h-full w-full mt-20 max-w-[1500px] gap-12 relative">
       <div className="flex w-full items-start justify-between  desktop_sm:flex-col desktop_sm:items-center gap-5 ">
         <CardContainer>
           <div className="font-bold">{isClaim && " Successfully presale has ended!"}</div>
@@ -125,16 +123,16 @@ export default function Home() {
           </div>
         </CardContainer>
         <CardContainer>
-          <div className="font-bold">Please Enter The CLUB Amount</div>
+          <div className="font-bold">Please Enter The WBT Amount</div>
           <div className="flex justify-between gap-3 items-center  tablet_sm:flex-col">
             <CoinBoxContainer icon="/images/solana.png" text="SOL" balance={balance} max={true} setIsValue={setIsValue} isValue={isValue} />
             <Image src={"/images/exchanger.png"} width={40} height={40} alt="exchanger" />
-            <CoinBoxContainer icon="/images/club.png" text="CLUB" balance={balance} max={false} setIsValue={setIsValue} isValue={isValue} />
+            <CoinBoxContainer icon="/images/club.png" text="WBT" balance={balance} max={false} setIsValue={setIsValue} isValue={isValue} />
           </div>
 
           <div className="flex flex-col items-center ">
             <div>
-              CLUB remaining for your wallet limit:{" "}
+              WBT remaining for your wallet limit:{" "}
               {remainBuyAmount.toLocaleString(undefined, {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 4,
@@ -148,7 +146,7 @@ export default function Home() {
             </div>
             <div>Minimum Per Transaction is $500, Maximum For Presale is $5,000</div>
           </div>
-          <ButtonContainer text={isClaim ? "Claim" : "BUY CLUB"} className="rounded-3xl bg-danger text-md px-10 py-3  m-auto" onClick={isClaim ? () => onClaimToken() : () => onBuyToken()} />
+          <ButtonContainer text={isClaim ? "Claim" : "BUY WBT"} className="rounded-3xl bg-danger text-md px-10 py-3  m-auto" onClick={isClaim ? () => onClaimToken() : () => onBuyToken()} />
 
         </CardContainer>
       </div >
@@ -166,8 +164,8 @@ export default function Home() {
             </div>
           </CardContainer>
         )}
-      <div className="text-lg font-900 max-w-2xl">With A Presale Price Of 0.07 BUSD. Our Minimum Limit Will Be $500 BUSD And
-        A Max Of $5,000 BUSD. See Our Whitepaper For Further Details.</div>
+      <div className="text-lg font-900 max-w-2xl">With A Presale Price Of 0.02 SOL. Our Minimum Limit Will Be 0.2 SOL And
+        A Max Of 50 SOL. See Our Whitepaper For Further Details.</div>
       <div className="flex gap-20 w-full desktop_sm:flex-col">
         <div className="flex flex-col text-xl font-900 w-full items-center gap-2">
           <ProgressContainer value={Math.floor(
@@ -190,7 +188,7 @@ export default function Home() {
             minimumFractionDigits: 0,
             maximumFractionDigits: 2,
           })}{" "}
-            CLUB</div>
+            WBT</div>
         </div>
         <div className="flex flex-col ">
           <div className="text-md">Maximum Presale Amount Allocated:</div>
@@ -198,10 +196,10 @@ export default function Home() {
             minimumFractionDigits: 0,
             maximumFractionDigits: 2,
           })}{" "}
-            CLUB</div>
+            WBT</div>
         </div>
         <div className="flex flex-col ">
-          <div className="text-md">SHIPE Price:</div>
+          <div className="text-md">WBT Price:</div>
           <div>    {PRICE_PER_TOKEN.toLocaleString(undefined, {
             minimumFractionDigits: 0,
             maximumFractionDigits: 9,

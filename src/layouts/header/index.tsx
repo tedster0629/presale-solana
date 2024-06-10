@@ -25,7 +25,7 @@ export default function Header() {
         }
     };
     return (
-        <aside className="w-full max-w-[1500px] ">
+        <aside className="w-full max-w-[1500px] z-10 py-12">
             <div className="flex items-center justify-between">
                 <div className="desktop_sm:hidden"></div>
                 <div className="flex items-center gap-5 ">
@@ -37,8 +37,8 @@ export default function Header() {
                         priority
                     />
                     <div className="flex  gap-1 justify-center flex-col">
-                        <div className="text-6xl text-danger font-finger_paint tablet_md:text-4xl "> KURABU</div>
-                        <div className="text-h3  !font-jolly_lodger tablet_md:text-h4">THE CLUB</div>
+                        <div className="text-6xl text-danger font-finger_paint tablet_md:text-4xl ">White&Bird</div>
+                        <div className="text-h3  !font-jolly_lodger tablet_md:text-h4">THE WBT</div>
                     </div>
                 </div>
                 <div className="flex gap-4">
